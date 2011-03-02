@@ -1,5 +1,5 @@
 #About
-intanware is a Content Management System created by Emfeld Web Technology. It offers simplicity and ease of use. This repo is for intanware version 2.0 (codename pyntanware). The CMS is based on Django and is best implemented on Apache web servers. Currently we are developing a version that runs on Google App Engine for better flexibility and scalability. For more info contact erich@emfeld.com.
+intanware is a Content Management System created by Emfeld Web Technology. It offers simplicity and ease of use. This repo is for intanware version 2.0 (codename pyntanware). The CMS is based on Django and is best implemented on Apache web servers. The previous release, intanware1.0 was based on CodeIgniter. We us python for version 2 because we see a significant improvement in site performance and loading time as well as SEO capabilities. Currently we are developing a version that runs on Google App Engine for better flexibility and scalability. For more info contact erich@emfeld.com.
 
 # Setup
 Adjust the following settings:
