@@ -1,0 +1,63 @@
+﻿
+
+/* Easy Slider */
+	#slider {
+	 float:left;
+}
+
+	#slider ul, #slider li,
+	#slider2 ul, #slider2 li{
+		margin:0;
+		padding:0;
+		list-style:none;
+		float:left;
+
+		}
+	#slider2{}
+	#slider li, #slider2 li{ 
+		/* 
+			define width and height of list item (slide)
+			entire slider area will adjust according to the parameters provided here
+		*/ 
+		
+		}	
+			
+	/* numeric controls */	
+	#slidernav
+	{
+		float:left;
+		z-index:100;
+		position:absolute;
+		margin:290px 0 0 45px;
+		}
+
+	ol#controls{
+		margin:10px auto 0 auto;
+		height:13px;
+		text-align:center;
+		width:150px;
+		
+		}
+	ol#controls li{
+		margin:0 3px 0 0; 
+		padding:0;
+		float:left;
+		list-style:none;
+		height:17px;
+		line-height:17px;
+		}
+	ol#controls li a{
+		float:left;
+		height:13px;
+		width:13px;
+		text-indent:-9999px;
+		text-decoration:none;
+		background:url(../../images/bullet_na.png) no-repeat top;
+		}
+	ol#controls li.current a{
+		color:transparent;
+		background:url(../../images/bullet_a.png) no-repeat top;
+		}
+	ol#controls li a:focus, #prevBtn a:focus, #nextBtn a:focus{outline:none;}
+	
+/* // Easy Slider */

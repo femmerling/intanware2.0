@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emfeld | {{page.page_title}}</title>
+    <meta name="KEYWORDS" content="{{page.page_key}}" />
+    <meta name="DESCRIPTION" content="{{page.page_desc}} Site is powered by intanware2.0" />
+    <meta name="Robots" content="all,index,follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    
+    <link  href="/site_media/img/favicon.ico" rel="icon" type="image/x-icon" /> 
+    <link href="/site_media/css/intanware.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    {{ page.page_content|safe}}
+  </body>
+</html>

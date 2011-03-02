@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PowerTel | Latest News</title>
+    <meta name="KEYWORDS" content="Powertel News" />
+    <meta name="DESCRIPTION" content="This page shows Powertel's latest news.  Site is powered by intanware2.0" />
+    <meta name="Robots" content="all,index,follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    
+    <link  href="/site_media/img/favicon.png" rel="icon" type="image/x-icon" /> 
+    <link href="/site_media/css/intanware.css" rel="stylesheet" type="text/css" />
+    <link href="/site_media/css/screen.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="whole-page">
+    <div id="head">
+      <h1><a href="http://www.powertel.co.id">PowerTel</a></h1>
+      <div id="homelinks">
+        <ul>
+          <li class="corp"><a href="/page/corporate">Corporate Info</a></li>
+          <li class="invs"><a href="/page/investor">Investor Room</a></li>
+          <li class="pns"><a href="/page/productservice">Product &amp; Solutions</a></li>
+          <li class="cont"><a href="/page/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="cent-wrap">
+      <div id="cent-title">
+        <h3>Latest News</h3>
+      </div>
+      <div id="framespace">
+        <div id="frames">
+          {% for news in news_contents.object_list %}
+            <h2>{{ news.news_title }}</h2><hr>
+            <p style="color:#999;font-size:10px;margin-bottom:-20px;margin-top:0px;">Posted on: {{ news.news_date }}</p>
+            {{ news.news_content|safe }}
+            <br /><br />
+          {% endfor %}
+          <div class="pagination" style="margin:20px 20px 20px 20px;">
+              <span class="step-links">
+                  {% if news_contents.has_previous %}
+                      <a href="?page={{ contacts.previous_page_number }}">previous</a>
+                  {% endif %}
+          
+                  <span class="current">
+                      Page {{ news_contents.number }} of {{ news_contents.paginator.num_pages }}.
+                  </span>
+          
+                  {% if contacts.has_next %}
+                      <a href="?page={{ news_contents.next_page_number }}">next</a>
+                  {% endif %}
+              </span>
+          </div>
+        </div>
+        <div id="sidemenu">
+          <ul>
+            <li><h3><a href="/page/news">Latest News</a></h3></li>
+            <li><h3><a href="/page/annualreport">Annual Report</a></h3></li>
+            <li><h3><a href="/page/financialinfo">Financial Highlights</a></h3></li>
+            <li><h3><a href="/page/investorrelation">Investor Relation</a></h3></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div id="footer">
+      <div id="footspace" style="float: left;">
+        <p>Copyright 2011 PT. Power Telecom (PowerTel)<br />All Rights Reserved</p>
+      </div>
+      <div id="footspace" style="float: right; text-align: right;">
+        <p>Powered by intanware 2.0<br />a product of <a href="http://www.emfeld.com">Emfeld</a></p>
+      </div>
+    </div>
+</div>
+  </body>
+</html>
